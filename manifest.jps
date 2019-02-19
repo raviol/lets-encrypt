@@ -101,14 +101,15 @@ buttons:
     action: installScript
 
 onInstall:
-  installScript:
-    customDomains: ${settings.customDomains}
-    nodeId: ${settings.nodeId}
-    nodeGroup: ${targetNodes.nodeGroup}
-    deployHook: ${settings.deployHook}
-    deployHookType: ${settings.deployHookType}
-    undeployHook: ${settings.undeployHook}
-    undeployHookType: ${settings.undeployHookType}
+  - script: return 1
+  - installScript:
+      customDomains: ${settings.customDomains}
+      nodeId: ${settings.nodeId}
+      nodeGroup: ${targetNodes.nodeGroup}
+      deployHook: ${settings.deployHook}
+      deployHookType: ${settings.deployHookType}
+      undeployHook: ${settings.undeployHook}
+      undeployHookType: ${settings.undeployHookType}
 
 onUninstall:
   - callScript:
