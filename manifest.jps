@@ -101,7 +101,6 @@ buttons:
     action: installScript
 
 onInstall:
-  - script: return 1
   - installScript:
       customDomains: ${settings.customDomains}
       nodeId: ${settings.nodeId}
